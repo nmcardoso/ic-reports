@@ -1,5 +1,6 @@
 \section{Análises}
 \subsection{Análise da Arquitetura}
+\label{sec:arquitetura}
 
 \begin{table}[h!]
   \centering
@@ -24,7 +25,7 @@
 
 O iNaturalist é um sistema complexo e com muitos recursos, que estendem desde o armazenamento dos dados, através das observações, até suas ferramentas de análises, pela sua interface web. A tabela \ref{tab:back-end-espec} mostra as principais características, como as linguagens e arquiteturas utilizadas.
 
-Tecnologias modernas e de código aberto foram muito bem exploradas no desenvolvimeto do sistema, como visto na tabela \ref{tab:back-end-espec}. \emph{Ruby on Rails} é uma \emph{framework} de código aberto, robusta e estável. É usada por grandes nomes como GitHub, Shopify, SoundCloud, Airbnb e outras.
+Tecnologias modernas e de código aberto foram muito bem exploradas no desenvolvimento do sistema, como visto na tabela \ref{tab:back-end-espec}. \emph{Ruby on Rails} é uma \emph{framework} de código aberto, robusta e estável. É usada por grandes nomes como GitHub, Shopify, SoundCloud, Airbnb e outras.
 
 \begin{figure}[h!]
   \centering
@@ -41,16 +42,16 @@ Os blocos vermelhos são camadas de abstração do \emph{Ruby on Rails}, que sã
 
 \begin{description}
   \item[Web Server] \hfill \\ Componente do sistema responsável por monitorar as requisições HTTP feitas ao servidor e encaminhar para a aplicação Ruby. Sua importância está no gerenciamento dos recursos do sistema, criando vários processos da aplicação para que seja possível executar requisições em paralelo.
-  \item[Dispatcher] \hfill \\ É uma das primeiras classes do fluxo de uma requisição. Ela que faz interface entre a rede e o sistema, recebendo a requisição HTTP do \emph{Web Server} e instanciando o controlador da respectiva rota\footnote{Neste contexto, rota está relacionada com o caminho completo da URL. Cada caminho tem um controlador associado, que pode renderizar uma página, fazer persistência de dados e etc.}.
+  \item[Dispatcher] \hfill \\ É uma das primeiras classes do fluxo de uma requisição. Ela que faz interface entre a rede e o sistema, recebendo a requisição HTTP do \emph{Web Server} e instanciando o controlador da respectiva rota\footnote{Neste contexto, a rota está relacionada com o caminho completo da URL. Cada caminho tem um controlador associado, que pode renderizar uma página, fazer persistência de dados e etc.}.
   \item[Controller] \hfill \\ É implementada a lógica de uma ou de um conjunto de rotas identificadas por um padrão.
   \item[Active Record] \hfill \\ Responsável por representar e manipular as tabelas do banco de dados.
-  \item[Action View] \hfill \\ É a classe de visualização e, portanto, é uma das últimas classe do fluxo de uma requisição. Ela recebe os dados do controlador manipula o template para renderizar uma página.
+  \item[Action View] \hfill \\ É a classe de visualização e, portanto, é uma das últimas classes do fluxo de uma requisição. Ela recebe os dados do controlador e manipula o template para renderizar uma página.
   \item[Action Webservices] \hfill \\ É uma classe de apoio do \emph{Ruby on Rails} para facilitar a criação de \emph{Web Services} interoperáveis com a \emph{framework}. Assim como a \texttt{Action View}, ela também está no final do fluxo de uma requisição, mas ao invés de renderizar uma página, ela processa e reponde requisições feitas pela API.
 \end{description}
 
 A arquitetura deste sistema é monolítica. Uma das principais características é que o sistema é segmentado por partes responsáveis por uma tarefa específica e estas partes são interconectadas. É possível observar isso analisando figura \ref{fig:arch} e a descrição dos elementos.
 
-Alguns pontos positivos da arquiterura monolítica são:
+Alguns pontos positivos da arquitetura monolítica são:
 
 \begin{enumerate}
   \item Desenvolvimento: no princípio, o desenvolvimento é muito simples, pois todo \emph{codebase} está em uma mesma linguagem e em um mesmo ambiente.
@@ -61,8 +62,8 @@ Alguns pontos positivos da arquiterura monolítica são:
 Já alguns dos pontos negativos são:
 
 \begin{enumerate}
-  \item Manuntenção: se a aplicação fica muito grande e complexa, fazer mudanças rapidatemente e corretamente torna-se um desafio, pois o encapsulamento de código é usado extensivamente pela arquitetura para separar o código em níveis de abstração, o que torna difícil fazer uma modificação sem gerar efeitos colaterais em outras partes do sistema.
-  \item Confiabilidade: um \emph{bug} em qualquer módulo (ex: vazamento de memória) pode potencialmente derrubar todo processo. E, como todas as instâncias da aplicação são idênticas, este \emph{bug} pode afetar o desenpenho de todo sistema.
+  \item Manutenção: se a aplicação fica muito grande e complexa, fazer mudanças rapidamente e corretamente torna-se um desafio, pois o encapsulamento de código é usado extensivamente pela arquitetura para separar o código em níveis de abstração, o que torna difícil fazer uma modificação sem gerar efeitos colaterais em outras partes do sistema.
+  \item Confiabilidade: um \emph{bug} em qualquer módulo (ex: vazamento de memória) pode potencialmente derrubar todo processo. E, como todas as instâncias da aplicação são idênticas, este \emph{bug} pode afetar o desempenho de todo sistema.
   \item Modernização: pode ser difícil novas tecnologias em aplicações monolíticas, já que modificações na linguagem ou na \emph{framework} afeta toda a aplicação.
 \end{enumerate}
 
