@@ -1,6 +1,6 @@
 \section{Materiais e Métodos}
 \subsection{Escolha da plataforma}
-Primeiramente foi feito o estudo do estado da arte das tecnologias utilizadas em coleta de observações da natureza feitas por voluntários \cite{azavea2014, azavea2015}. Com isso, foi possível fazer um levantamento das melhores plataformas existentes hoje. A finalidade deste levantamento foi basear a implementação deste projeto em um já existente e, a partir dele, fazer modificações e otimizações para que atenda às necessidades locais. 
+Primeiramente foi feito o estudo do estado da arte das tecnologias utilizadas em coleta de observações da natureza feitas por voluntários \cite{azavea2014, azavea2015}. Com isso, foi possível fazer um levantamento das melhores plataformas existentes hoje. A finalidade deste levantamento foi basear a implementação deste projeto em um já existente e, a partir dele, fazer modificações e otimizações para que atenda às necessidades locais.
 
 Algumas das plataformas analisadas foram: o \emph{iNaturalist}\footnote{Site do projeto: http://inaturalist.org.}, desenvolvido pela Academia de Ciências da Califórnia, o \emph{Map of Life}\footnote{Site do projeto: http://mol.org.}, desenvolvido pela Universidade Yale, e o \emph{eBird}\footnote{Site do projeto: http://ebird.org.}, desenvolvido pela Universidade Cornell. O iNaturalist foi escolhido como plataforma de desenvolvimento. A escolha foi feita analizando critérios como frequência de atualização do código, uso de software livre, sistema de controle de qualidade de dados utilizado e disponibilidade em vários tipos de dispositivos (desktop, móvel, etc.).
 
@@ -16,7 +16,7 @@ Por se tratar de sistemas em desenvolvimento paralelo, a sincronização do cód
 
 Para início do desenvolvimento, dois repositórios foram clonados: o principal\footnote{Endereço do repositório: https://github.com/inaturalist/inaturalist.}, com o código-fonte do \emph{back-end} e do \emph{front-end}, e o do aplicativo Android\footnote{Endereço do repositório: https://github.com/inaturalist/iNaturalistAndroid.}. A implementação desta nova versão do iNaturalist foi feita paralelamente com o \emph{upstream}.
 
-Como desenvolvimento desta instânica do iNaturalist foi feito em paralelo com o desenvolvimento do projeto original, o código deste projeto foi periodicamente sincronizado com o projeto original. Esta sincronização foi feita como mostra a figura \ref{fig:git}. 
+Como desenvolvimento desta instância do iNaturalist foi feito em paralelo com o desenvolvimento do projeto original, o código deste projeto foi periodicamente sincronizado com o projeto original. Esta sincronização foi feita como mostra a figura \ref{fig:git}.
 
 \begin{figure}[h!]
   \centering
@@ -25,7 +25,7 @@ Como desenvolvimento desta instânica do iNaturalist foi feito em paralelo com o
   \label{fig:git}
 \end{figure}
 
-Como o público álvo é brasileiro, a primeira tarefa foi traduzir todo aplicativo Android para o português. Depois, para incluir recursos de \emph{gamificação} na plataforma, uma nova funcionalidade foi implementada: o sistema de \emph{badges}. Para isto, foram necessárias algumas modificações na estrutura do banco de dados e no código.
+Como o público alvo é brasileiro, a primeira tarefa foi traduzir todo aplicativo Android para o português. Depois, para incluir recursos de \emph{gamificação} na plataforma, uma nova funcionalidade foi implementada: o sistema de \emph{badges}. Para isto, foram necessárias algumas modificações na estrutura do banco de dados e no código.
 
 % \begin{figure}[h!]
 %   \centering
