@@ -1,0 +1,64 @@
+\documentclass[a4,12pt]{horizon-theme}
+\usepackage{lipsum}
+\usepackage{fontawesome5}
+\usepackage{graphicx,url}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{enumerate}
+\usepackage{gensymb}
+
+\setTitle{Classificação Morfológica de Galáxias usando Conjunto de Redes Convolucionais}
+\setUniversity{Universidade de São Paulo}
+\setFaculty{Instituto de Astronomia, Geofísica e Ciências Atmosféricas}
+\setDepartment{Departamento de Astronomia}
+\setCoverMainLogo{figures/urania_color.pdf}
+
+\setCoverLeftBox{%
+  {\Large Iniciação Científica}\\[2pt]
+  {Relatório Final}\\[35pt]
+  {\Large Natanael Magalhães Cardoso}\\[10pt]
+  {\normalsize Orientadora: }{\large Cláudia Mendes de Oliveira}
+}
+
+\setCompactAuthors{Natanael Magalhães Cardoso\textsuperscript{*, \faEnvelope[regular]}, Cláudia Mendes de Oliveira\textsuperscript{$\dagger$}}
+
+\setHeaderRight{N. M. Cardoso}
+\setHeaderLeft{Instituto de Astronomia, Geofísica e Ciências Atmosféricas}
+
+\setCompactInfo{\textsuperscript{*} {\small Departamento de Computação e Sistemas Digitais, Escola Politécnica, Universidade de São Paulo.}\\[10pt]
+\textsuperscript{$\dagger$} {\small Departamento de Astronomia, Instituto de Astronimia, Geofísica e Ciências Atmosféricas, Universidade de São Paulo.}\\[10pt]
+\textsuperscript{\faEnvelope[regular]} {\small nauxmac@gmail.com}\\[10pt]
+{\color{gray}\rule{\linewidth}{0.4pt}}\\[10pt]
+{\bf Palavras-chave:} astronomia extra-galática, morfologia, classificação, visão computacional, redes neurais convolucionais, \emph{deep learning}, \emph{ensemble learning}.}
+
+\setAbstract{O universo é composto de galáxias que apresentam variadas formas. Uma vez determinada a estrutura de uma galáxia, é possível obter informações importantes desde sua formação até sua evolução. A classificação morfológica é a catalogação de galáxias de acordo com a sua aparência visual e a classificação está ligada com as propriedades físicas da galáxia. Uma classificação morfológica feita através de inspeção visual está sujeita a um viés causado pela subjetividade da observação humana. Por isso, a classificação sistemática, objetiva e facilmente reproduzível de galáxias vem ganhando importância desde quando o astrônomo Edwin Hubble criou seu famoso método de classificação. Neste trabalho, nós combinamos classificações visuais acuradas do projeto Galaxy Zoo com métodos de \emph{Deep Learning}. O objetivo é encontrar uma técnica automática e eficiente que consiga simular a classificação visual humana a partir da análise de imagens do DR1 (www.datalab.noao.edu) do Southern Photometric Local Universe Survey (S-PLUS). Para isto, um modelo \emph{Deep Learning} foi desenvolvido através de um conjunto de quatro redes neurais convolucionais usando a técnica \emph{Stacking Ensemble}. Isto nos permitiu obter um modelo com acurácia na classificação de $\approx 99\%$.}
+
+
+\begin{document}
+\horizonCover
+
+\horizonTitle
+
+\horizonAbstract
+
+\input{sections/intro.tex}
+\input{sections/dados.tex}
+\input{sections/metodo.tex}
+\input{sections/resultados.tex}
+\input{sections/conclusao.tex}
+\input{sections/agradecimentos.tex}
+
+
+\bibliographystyle{unsrt}
+\bibliography{refs}
+
+
+\horizonBackCover
+\end{document}
