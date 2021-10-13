@@ -83,3 +83,108 @@
     \caption{Monkey Striate Cortex; D. H. Hubel \& T. N. Wisel, 1968.}
   \end{figure}
 \end{frame}
+
+\begin{frame}{Background: Visão Computacional}
+  \begin{figure}
+    \begin{tabular}{cc}
+      \includegraphics[height=0.76\textheight,trim={85mm 85mm 20mm 20mm},clip]{papers/lecun-3.pdf} & \includegraphics[height=0.76\textheight,trim={80mm 80mm 18mm 20mm},clip]{papers/lecun-8.pdf}
+    \end{tabular}
+    \caption{Backpropagation applied to Handwritten Zip Code Recognition; Y. LeCun et al., 1989.}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Objetivo}
+  \begin{minipage}{0.48\textwidth}
+    \begin{center}
+      \textbf{Problema}
+    \end{center}
+    \begin{figure}
+      \includegraphics[width=\linewidth,trim={0mm 0mm 117mm 154mm},clip]{figures/galaxygrid_2.pdf}
+    \end{figure}
+  \end{minipage}\hfill
+  \begin{minipage}{0.48\textwidth}
+    \begin{center}
+      \textbf{Método}
+    \end{center}
+    \begin{figure}
+      \includegraphics[width=\linewidth,trim={80mm 160mm 18mm 40mm},clip]{papers/lecun-8.pdf}
+    \end{figure}
+  \end{minipage}
+\end{frame}
+
+
+
+{
+\AtBeginSection{}
+\section{Conjunto de Dados}
+}
+
+\begin{frame}{S-PLUS: Southern Photometric Local Universe Survey}
+  \begin{minipage}{0.48\textwidth}
+    \begin{figure}
+      \includegraphics[width=\linewidth,trim={110mm 0mm 40mm 0mm},clip]{fig/splus.png}
+    \end{figure}
+  \end{minipage}\hfill
+  \begin{minipage}{0.48\textwidth}
+    \begin{figure}
+      \includegraphics[width=\linewidth]{fig/splus_filters.png}
+    \end{figure}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}{Conjunto de Dados}
+  \begin{minipage}{0.53\textwidth}
+    \begin{figure}
+      \includegraphics[width=\linewidth]{figures/galaxygrid_2.pdf}
+    \end{figure}
+  \end{minipage}\hfill
+  \begin{minipage}{0.43\textwidth}
+    \begin{table}
+      \scriptsize
+      \begin{tabular}{lrrr}
+        \toprule
+        Classe   & Treino & Validação & Teste \\
+        \midrule
+        Elíptica & 714    & 79        & 88    \\
+        Espiral  & 1517   & 169       & 188   \\
+        Total    & 2231   & 248       & 276   \\
+        \bottomrule
+      \end{tabular}
+    \end{table}
+    \begin{figure}
+      \includegraphics[width=0.5\linewidth]{fig/zoo.jpeg}
+    \end{figure}
+  \end{minipage}
+
+  \vspace{3mm}
+  Imagens do S-PLUS e Classificações do GalaxyZoo
+\end{frame}
+
+\begin{frame}{Pré-processamento: Redução}
+  \vspace{2mm}
+  \begin{minipage}{0.48\textwidth}
+    \begin{figure}
+      \begin{tabular}{ccc}
+        \includegraphics[width=13mm]{imgs/F378.png} &
+        \includegraphics[width=13mm]{imgs/F395.png} &
+        \includegraphics[width=13mm]{imgs/F410.png}   \\
+        \includegraphics[width=13mm]{imgs/F430.png} &
+        \includegraphics[width=13mm]{imgs/F515.png} &
+        \includegraphics[width=13mm]{imgs/F660.png}   \\
+        \includegraphics[width=13mm]{imgs/F861.png} &
+        \includegraphics[width=13mm]{imgs/G.png}    &
+        \includegraphics[width=13mm]{imgs/I.png}      \\
+        \includegraphics[width=13mm]{imgs/R.png}    &
+        \includegraphics[width=13mm]{imgs/U.png}    &
+        \includegraphics[width=13mm]{imgs/Z.png}
+      \end{tabular}
+    \end{figure}
+  \end{minipage}\hfill
+  \begin{minipage}{0.38\textwidth}
+    \begin{figure}
+      \includegraphics[width=\linewidth]{imgs/color.png}
+    \end{figure}
+  \end{minipage}
+  \captionof{figure}{Imagem em cada banda do S-PLUS e respectiva redução para RGB usando Trilogy.}
+\end{frame}
+
