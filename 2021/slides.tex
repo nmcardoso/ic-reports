@@ -188,3 +188,93 @@
   \captionof{figure}{Imagem em cada banda do S-PLUS e respectiva redução para RGB usando Trilogy.}
 \end{frame}
 
+
+
+{
+\AtBeginSection{}
+\section{Métodos}
+}
+
+\begin{frame}{Redes Neurais Convolucionais}
+  \begin{figure}
+    \includegraphics[width=\linewidth]{fig/convnet.png}
+    \caption{Estrutura simplificada de uma rede neural convolucional}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Conjunto de Redes Neurais Convolucionais}
+  Stacking Ensemble (Stacked generalization; D. H. Wolpert, 1992)
+  \vspace{2mm}
+
+  \begin{figure}
+    \includegraphics[width=\linewidth]{figures/arch.pdf}
+    \caption{Estrutura do modelo proposto.}
+  \end{figure}
+\end{frame}
+
+
+{
+\AtBeginSection{}
+\section{Resultados}
+}
+
+\begin{frame}{Performance no Treinamento}
+  \begin{minipage}{0.48\textwidth}
+    \begin{figure}
+      \includegraphics[width=\linewidth]{figures/loss_170.pdf}
+      \caption{Treinamento}
+    \end{figure}
+  \end{minipage}\hfill
+  \begin{minipage}{0.48\textwidth}
+    \begin{figure}
+      \includegraphics[width=\linewidth]{figures/val_acc_170.pdf}
+      \caption{Validação}
+    \end{figure}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}{Performance no Conjunto de Teste: Curva ROC}
+  \begin{minipage}{0.48\textwidth}
+    \begin{figure}
+      \includegraphics[width=\linewidth]{figures/roc_mn170_E.pdf}
+      \caption{Classe Elíptica}
+    \end{figure}
+  \end{minipage}\hfill
+  \begin{minipage}{0.48\textwidth}
+    \begin{figure}
+      \includegraphics[width=\linewidth]{figures/roc_mn170_S.pdf}
+      \caption{Classe Espiral}
+    \end{figure}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}{Performance no Conjunto de Teste: Curva PR}
+  \begin{minipage}{0.48\textwidth}
+    \begin{figure}
+      \includegraphics[width=\linewidth]{figures/pr_mn170_E.pdf}
+      \caption{Classe Elíptica}
+    \end{figure}
+  \end{minipage}\hfill
+  \begin{minipage}{0.48\textwidth}
+    \begin{figure}
+      \includegraphics[width=\linewidth]{figures/pr_mn170_S.pdf}
+      \caption{Classe Espiral}
+    \end{figure}
+  \end{minipage}
+\end{frame}
+
+\begin{frame}{Performance no Conjunto Blind}
+  \begin{minipage}{0.48\textwidth}
+    \begin{figure}
+      \includegraphics[width=\linewidth]{figures/zoo170_color_color.pdf}
+      \caption{Classificação humana}
+    \end{figure}
+  \end{minipage}\hfill
+  \begin{minipage}{0.48\textwidth}
+    \begin{figure}
+      \includegraphics[width=\linewidth]{figures/mn170_color_color.pdf}
+      \caption{Classificação automática}
+    \end{figure}
+  \end{minipage}
+\end{frame}
+
