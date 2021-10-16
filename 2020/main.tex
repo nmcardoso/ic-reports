@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazilian]{babel}
+\usepackage[style=numeric,sorting=none,backend=biber]{biblatex}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage[margin=.2cm]{caption}
+\usepackage{extsizes}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage[export]{adjustbox}
+\usepackage{afterpage}
+\usepackage{tikz}
+\usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,
+  decorations.pathreplacing,decorations.pathmorphing,shapes,
+  matrix,shapes.symbols}
+
+\usepackage{titlesec}
+\titlelabel{\thetitle.\quad}
+
+\addbibresource{bibliography.bib}
+
+\setlength{\parindent}{2.5em}
+\setlength{\parskip}{.75em}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadalign{bc}
+
+\begin{document}
+%% FRONT-PAGE
+\onehalfspacing
+\input{sections/front-page.tex}
+
+%% SECTION
+\input{sections/abstract.tex}
+\input{sections/introduction.tex}
+\input{sections/objectives.tex}
+\input{sections/methods.tex}
+\input{sections/results.tex}
+\input{sections/conclusion.tex}
+
+%% REFERENCES
+\printbibliography
+\end{document}
