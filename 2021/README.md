@@ -1,12 +1,4 @@
-# Relatórios de IC
-
-* **2016**: [Desenvolvimento de uma plataforma citizen science para coleta de dados em biodiversidade](https://github.com/nmcardoso/ic-reports/tree/main/2016)
-* **2020**: [Classificação morfológica de galáxias do S-PLUS usando deep learning](https://github.com/nmcardoso/ic-reports/tree/main/2020)
-* **2021**: [Classificação morfológica de galáxias usando conjunto de redes neurais convolucionais](https://github.com/nmcardoso/ic-reports/tree/main/2021) ⭐
-
-<br><br>
-
-## Último trabalho
+# Relatório
 
 <p align="center"><img src="https://raw.githubusercontent.com/nmcardoso/pdf-preview/data/ic-reports/2021/output/relatorio-01.png" width="100%" /></p>
 <p align="center"><img src="https://raw.githubusercontent.com/nmcardoso/pdf-preview/data/ic-reports/2021/output/relatorio-02.png" width="100%" /></p>
